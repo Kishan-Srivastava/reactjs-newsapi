@@ -1,2 +1,2 @@
 # reactjs-newsapi
-Build using ReactJS using NewsAPI
+One stop for all top-news. Build using ReactJS and NewsAPI
