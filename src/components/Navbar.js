@@ -1,15 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-export default class Navbar extends Component {
-  constructor(props) {
-    super(props);
-    // this.state={
-    //   category : this.props.category_type[0]
-    // }
-    //console.log("From NavBar Constructor : "+this.props.category_type[0])
-    //this.handleQuery = this.handleQuery.bind(this);
-    //this.handleOnChangeCategory = this.handleOnChangeCategory.bind(this);
-  }
+const Navbar = (props) =>{
+  // constructor(props) {
+  //   super(props);
+  //   // this.state={
+  //   //   category : this.props.category_type[0]
+  //   // }
+  //   //console.log("From NavBar Constructor : "+this.props.category_type[0])
+  //   //this.handleQuery = this.handleQuery.bind(this);
+  //   //this.handleOnChangeCategory = this.handleOnChangeCategory.bind(this);
+  // }
   // onChangeQuery = (e) => {
   //   this.props.handleSearch( 
   //      e.target.value );
@@ -22,9 +22,8 @@ export default class Navbar extends Component {
   //   this.setState({category:e.target.value})
   //   this.props.handleSelectedCategory(e.target.value)
   // }
-  render() {
     return (
-      <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top" data-bs-theme="dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
             NewsMonkey
@@ -47,7 +46,7 @@ export default class Navbar extends Component {
                   Home
                 </Link>
               </li>
-              <li className="nav-item"><Link className="nav-link" to="/business">Business</Link></li>
+              {/* <li className="nav-item"><Link className="nav-link" to="/business">Business</Link></li> */}
               <li className="nav-item"><Link className="nav-link" to="/entertainment">Entertainment</Link></li>
               <li className="nav-item"><Link className="nav-link" to="/generalhealth">General Health</Link></li>
               <li className="nav-item"><Link className="nav-link" to="/science">Science</Link></li>
@@ -73,5 +72,6 @@ export default class Navbar extends Component {
         </div>
       </nav>
     );
-  }
 }
+
+export default Navbar;

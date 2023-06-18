@@ -25,7 +25,7 @@ function App() {
   //<Navbar handleSearch={handlingQuery} query={query} category_type={category_type} handleSelectedCategory={toggleSelectedCategory}/>
   const [progress,setProgress] = useState(0);
   const setProgressFromChild = (p)=>{
-    setProgress(progress+p);
+    setProgress(p);
   }
   return (
     <Router>
@@ -39,7 +39,7 @@ function App() {
       <Routes>
         
         <Route exact path="/" element={<News setProgress={setProgressFromChild} category="business" />} />
-        {/* <Route exact path="/business" element={<News setProgress={setProgressFromChild} category="business" />} /> */}
+
         <Route exact path="/entertainment" element={<News setProgress={setProgressFromChild} category="entertainment" />} />
         <Route exact path="/generalhealth" element={<News setProgress={setProgressFromChild} category="generalhealth" />} />
         <Route exact path="/science" element={<News setProgress={setProgressFromChild} category="science" />} />
@@ -53,3 +53,4 @@ function App() {
 }
 
 export default App;
+        {/* <Route exact path="/business" element={<News setProgress={setProgressFromChild} category="business" />} /> */}
